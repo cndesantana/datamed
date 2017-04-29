@@ -56,4 +56,21 @@ for(i in 2:length(inputfiles)){
 }
 
 
+#### Testing the table contents
+
+file1 <- read.csv(inputfiles[2],sep="\t",header=TRUE)
+file2 <- read.csv(inputfiles[3],sep="\t",header=TRUE)
+file3 <- read.csv(inputfiles[4],sep="\t",header=TRUE)
+file4 <- read.csv(inputfiles[5],sep="\t",header=TRUE)
+file5 <- read.csv(inputfiles[6],sep="\t",header=TRUE)
+file6 <- read.csv(inputfiles[7],sep="\t",header=TRUE)
+paste( length(unique(sort(file1$ID))), 
+       " != ", length(unique(sort(file2$ID))), 
+       " != ", length(unique(sort(file3$ID))),
+       " != ", length(unique(sort(file4$ID))),
+       " != ", length(unique(sort(file5$ID))),
+       " != ", length(unique(sort(file6$ID))),
+       sep="");
+
+
 
